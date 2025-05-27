@@ -7,3 +7,13 @@ section { margin-bottom: 2.5rem; }
 h1, h2 { margin: 0 0 1rem; }
 footer { background: #fafafa; text-align: center; padding: 1rem; font-size: .9rem; }
 img.avatar { width: 160px; border-radius: 50%; }
+/* assets/style.css の末尾に追記 */
+nav a:hover { text-decoration: underline; }
+.card { border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; }
+.card h3 { margin-top: 0; }
+@media (min-width: 600px) {
+  .grid { display: flex; gap: 1rem; }
+  .grid .card { flex: 1; }
+}
+.en-name { font-size: 1.8rem; font-weight: 600; }
+.jp-name { font-size: 1.2rem; color: #555; }
