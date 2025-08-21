@@ -6,9 +6,7 @@
   <title>研究（日本語） | Publications & Talks</title>
   <meta name="description" content="論文リストと講演リスト（日本語）" />
   <style>
-    :root{
-      --ink:#1f2937; --muted:#6b7280; --link:#1d4ed8; --bg:#fff; --border:#e5e7eb;
-    }
+    :root{ --ink:#1f2937; --muted:#6b7280; --link:#1d4ed8; --bg:#fff; --border:#e5e7eb; --chip:#f3f4f6; }
     html,body{height:100%}
     body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); background:var(--bg)}
     .wrap{max-width: 960px; margin: 48px auto; padding: 0 20px}
@@ -18,13 +16,18 @@
     nav a{margin-right:12px}
     h1{font-size: clamp(24px,3vw,32px); margin:.2em 0 .4em}
     h2{font-size: clamp(20px,2.6vw,26px); margin: 1.2em 0 .6em}
-    h3{font-size: clamp(16px,2vw,20px); margin: 1.2em 0 .4em; color:var(--muted)}
     .note{color:var(--muted); font-size: 14px}
     .card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,.04);}
     .grid{display:grid; gap:16px}
     .list{line-height:1.7; padding-left: 1.2em}
     .list li{margin: .45em 0}
     .back{display:inline-block; margin-top: 24px}
+    details.year{margin: 10px 0 0; border:1px solid var(--border); border-radius:12px; background:#fafafa}
+    details.year[open]{background:#fff}
+    details.year > summary{cursor:pointer; list-style:none; padding:12px 16px; font-weight:700; display:flex; align-items:center; gap:10px}
+    details.year > summary::-webkit-details-marker{display:none}
+    .summary-chip{font-size:12px; color:#111827; background:var(--chip); border:1px solid var(--border); border-radius:999px; padding:4px 10px}
+    .year-body{padding: 6px 16px 14px}
   </style>
 </head>
 <body>
@@ -49,38 +52,49 @@
       </div>
 
       <div class="card">
-        <h2>講演リスト (Talks)</h2>
+        <h2>発表リスト (Talks) — 時系列<small style="color:var(--muted); font-weight:400">（新しい順）</small></h2>
 
-        <h3>【査読あり・口頭発表】</h3>
-        <ol class="list">
-          <li>[S1] Kenshin Uriu, Katsuya Shimizu, Ryotaro Suda, Kento Sasaki and Kensuke Kobayashi, “High pressure magnetometry with NV center diamonds” International Conference on Magnetism 2024. (Bologna, Italy, June 2024)</li>
-        </ol>
+        <!-- 2025年度: 2025/04 - 2026/03  → 最新は開いた状態で表示 -->
+        <h3 style="margin:.6em 0 .4em">2025年度</h3>
+        <ul class="list">
+          <li>"Development of wide-field magnetic imaging for high-pressure superconductivity with diamond quantum sensor" Kenshin Uriu, Ryotaro Suda, Kouki Yamamoto, Mari Einaga, Katsuya Shimizu, Kento Sasaki, Kensuke Kobayashi 2025 July Tokyo, Japan - CDRTS2025</li>
+          <li>「ダイヤモンド NV中心における励起三重項ゼロ磁場分裂の圧力応答測定」 須田涼太郎, 瓜生健心, 山本航輝, 佐々木岬, 佐々木健人, 榮永茉利, 清水克哉, 小林研介  2025年7月 滋賀 — 第70回物性若手夏の学校</li>
+        </ul>
 
-        <h3>【査読なし・口頭発表】</h3>
-        <ol class="list" start="2">
-          <li>[S2] 瓜生健心, 須田涼太郎, 山本航輝, 佐々木岬, 榮永茉利, 佐々木健人, 小林研介, 清水克哉:「ダイヤモンド量子センサを組み込んだ高圧力発生装置の開発」、日本物理学会第79回年次大会 (札幌、2024年9月)</li>
-          <li>[S3] 須田涼太郎, 山本航輝, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 佐々木健人, 小林研介:「ダイヤモンド量子センサを用いた高圧力下での応力分布イメージング」、日本物理学会第79回年次大会 (札幌、2024年9月)</li>
-          <li>[S4] 山本航輝, 須田涼太郎, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 佐々木健人, 小林研介:「ダイヤモンド量子センサを用いた高圧力下での鉄の磁気イメージング」、日本物理学会第79回年次大会 (札幌、2024年9月)</li>
-          <li>[S5] Ryotaro Suda, Kouki Yamamoto, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu, Kento Sasaki and Kensuke Kobayashi, “Imaging stress distribution under high pressure using diamond quantum sensors” 13th Workshop on Semiconductor/Superconductor Quantum Coherence Effect and Quantum Information (Nasu, Japan, September 2024).</li>
-          <li>[S6] 瓜生健心, 清水克哉, 須田涼太郎, 佐々木健人, 小林研介：「高圧力下での量子計測の試み：量子センサの導入」、日本物理学会第78回年次大会 (仙台、2023年9月)</li>
-          <li>[S7] 須田涼太郎, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉：「高圧力下での量子計測の試み：圧力と磁場の可視化」、日本物理学会第78回年次大会 (仙台、2023年9月)</li>
-          <li>[S8] Ryotaro Suda, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, and Katsuya Shimizu, “Development of Quantum Sensing under High Pressure: Visualization of Pressure and Magnetic Field” 12th Workshop on Semiconductor/Superconductor Quantum Coherence Effect and Quantum Information (Nasu, Japan, September 2023).</li>
-          <li>[S9] 須田涼太郎, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉：「高圧力下での量子計測の試み：圧力と磁場の可視化」、ipi-ダイキンシンポジウム (東京、2023年10月)</li>
-          <li>[S10] 瓜生健心, 清水克哉, 須田涼太郎, 佐々木健人, 小林研介：「高圧力下における量子計測の試み」、第64回高圧討論会 (千葉、2023年11月)</li>
-          <li>[S11] Ryotaro Suda, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, and Katsuya Shimizu, “Development of Quantum Sensing under High Pressure: Visualization of Pressure and Magnetic Field” International Symposium on Quantum Electronics (Tokyo, Japan, February 2024).</li>
-          <li>[S12] 須田涼太郎, 山本航輝, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉：「高圧力下での量子計測：圧力と磁場の可視化」、第69回物性若手夏の学校 (愛知、2024年8月) ※</li>
-          <li>[S13] Kouki Yamamoto, Ryotaro Suda, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu, Kento Sasaki, and Kensuke Kobayashi., “Magnetic imaging of iron under high pressure using diamond quantum sensors” Global Green Transformation Workshop 2024 (Manchester, UK, October 2024)</li>
-          <li>[S14] 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 須田涼太郎, 山本航輝, 佐々木健人, 小林研介:「ダイヤモンド量子センサを用いた高圧力下応力イメージング」、第65回高圧討論会 (盛岡、2024年11月)</li>
-          <li>[S15] Ryotaro Suda, Kouki Yamamoto, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, and Katsuya Shimizu, “Imaging stress distribution under high pressure using diamond quantum sensors” 2nd FoPM International Symposium (Tokyo, Japan, February 2025).</li>
-          <li>[S16] Kenshin Uriu, Ryotaro Suda, Kouki Yamamoto, Mari Einaga, Katsuya Shimizu, Kento Sasaki, and Kensuke Kobayashi. “Development of wide-field magnetic imaging for high-pressure superconductivity with diamond quantum sensor” CDRTS2025. (Tokyo, Japan, July 2025)</li>
-        </ol>
+        <!-- 2024年度: 2024/04 - 2025/03  → 折りたたみ（デフォルト閉） -->
+        <details class="year">
+          <summary>2024年度 <span class="summary-chip">クリックで展開</span></summary>
+          <div class="year-body">
+            <ul class="list">
+              <li>"Imaging stress distribution under high pressure using diamond quantum sensors" Ryotaro Suda, Kouki Yamamoto, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu 2025 February Tokyo, Japan — 2nd FoPM International Symposium</li>
+              <li>「ダイヤモンド量子センサを用いた高圧力下応力イメージング」 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 須田涼太郎, 山本航輝, 佐々木健人, 小林研介 2024年11月 盛岡 — 第65回高圧討論会</li>
+              <li>"Magnetic imaging of iron under high pressure using diamond quantum sensors" Kouki Yamamoto, Ryotaro Suda, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu, Kento Sasaki, Kensuke Kobayashi 2024 October Manchester, UK — Global Green Transformation Workshop 2024</li>
+              <li>"Imaging stress distribution under high pressure using diamond quantum sensors" Ryotaro Suda, Kouki Yamamoto, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu, Kento Sasaki, Kensuke Kobayashi 2024 September Nasu, Japan — 13th Workshop on Semiconductor/Superconductor Quantum Coherence Effect and Quantum Information</li>
+              <li>「ダイヤモンド量子センサを用いた高圧力下での鉄の磁気イメージング」 山本航輝, 須田涼太郎, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 佐々木健人, 小林研介 2024年9月 札幌 — 日本物理学会第79回年次大会</li>
+              <li>「ダイヤモンド量子センサを用いた高圧力下での応力分布イメージング」 須田涼太郎, 山本航輝, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉, 佐々木健人, 小林研介 2024年9月 札幌 — 日本物理学会第79回年次大会</li>
+              <li>「ダイヤモンド量子センサを組み込んだ高圧力発生装置の開発」 瓜生健心, 須田涼太郎, 山本航輝, 佐々木岬, 榮永茉利, 佐々木健人, 小林研介, 清水克哉 2024年9月 札幌 — 日本物理学会第79回年次大会</li>
+              <li>「高圧力下での量子計測：圧力と磁場の可視化」 須田涼太郎, 山本航輝, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉 2024年8月 愛知 — 第69回物性若手夏の学校</li>
+              <li>"High pressure magnetometry with NV center diamonds" Kenshin Uriu, Katsuya Shimizu, Ryotaro Suda, Kento Sasaki, Kensuke Kobayashi 2024 June Bologna, Italy — International Conference on Magnetism 2024</li>
+            </ul>
+          </div>
+        </details>
 
-        <h3>【査読なし・ポスター発表】</h3>
-        <ol class="list" start="17">
-          <li>[S5.5] 須田 涼太郎, 瓜生 健心, 山本 航輝, 佐々木 岬, 佐々木 健人, 榮永 茉利, 清水 克哉, 小林 研介:「ダイヤモンド NV−中心における励起三重項ゼロ磁場分裂の圧力応答測定」 第70回物性若手夏の学校 (滋賀、2025年7月) ポスター発表</li>
-        </ol>
+        <!-- 2023年度: 2023/04 - 2024/03  → 折りたたみ（デフォルト閉） -->
+        <details class="year">
+          <summary>2023年度 <span class="summary-chip">クリックで展開</span></summary>
+          <div class="year-body">
+            <ul class="list">
+              <li>“Development of Quantum Sensing under High Pressure: Visualization of Pressure and Magnetic Field” Ryotaro Suda, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu 2024 February Tokyo, Japan — International Symposium on Quantum Electronics</li>
+              <li>「高圧力下における量子計測の試み」 瓜生健心, 清水克哉, 須田涼太郎, 佐々木健人, 小林研介 2023年11月 千葉 — 第64回高圧討論会</li>
+              <li>「高圧力下での量子計測の試み：圧力と磁場の可視化」 須田涼太郎, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉 2023年10月 東京 — ipi-ダイキンシンポジウム</li>
+              <li>"Development of Quantum Sensing under High Pressure: Visualization of Pressure and Magnetic Field" Ryotaro Suda, Kento Sasaki, Kensuke Kobayashi, Kenshin Uriu, Misaki Sasaki, Mari Einaga, Katsuya Shimizu 2023 September NAsu, Japan — 12th Workshop on Semiconductor/Superconductor Quantum Coherence Effect and Quantum Information</li>
+              <li>「高圧力下での量子計測の試み：圧力と磁場の可視化」 須田涼太郎, 佐々木健人, 小林研介, 瓜生健心, 佐々木岬, 榮永茉利, 清水克哉 2023年9月 仙台 — 日本物理学会第78回年次大会</li>
+              <li>「高圧力下での量子計測の試み：量子センサの導入」 瓜生健心, 清水克哉, 須田涼太郎, 佐々木健人, 小林研介 2023年9月 仙台 — 日本物理学会第78回年次大会</li>
+            </ul>
+          </div>
+        </details>
 
-        <p class="note">※ 必要に応じて各発表にスライドや予稿へのリンクを追加できます。</p>
+        <p class="note" style="margin-top:12px">※ 「年度」は日本の会計年度（4月〜翌年3月）に基づきます。2024年度までのリストはクリックで開閉できます。</p>
       </div>
     </section>
 
