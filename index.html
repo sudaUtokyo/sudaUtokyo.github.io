@@ -1,45 +1,136 @@
-<!doctype html><html lang="ja">
+<!doctype html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>Ryotaro Suda</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top | 研究 / 研究以外</title>
+  <meta name="description" content="研究と研究以外の二部構成トップページ" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --fg: #e6e6e6;
+      --muted: #a3a3a3;
+      --card: #15171c;
+      --accent: #60a5fa; /* blue-400 */
+      --ring: rgba(96,165,250,.5);
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--fg);
+      background: radial-gradient(1000px 600px at 10% 0%, #111827, #0b0c10 60%);
+      display: grid;
+      place-items: center;
+    }
+    .container {
+      width: min(1100px, 92vw);
+      padding: 32px 0 48px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: clamp(20px, 2.4vw, 28px);
+      letter-spacing: .2px;
+    }
+    .subtitle { color: var(--muted); font-size: 14px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(16px, 2.5vw, 28px);
+    }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      position: relative;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.02);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0,0,0,.45);
+      border-color: rgba(96,165,250,.25);
+    }
+    .card:focus-within { outline: 2px solid var(--ring); outline-offset: 3px; }
+
+    .content { padding: clamp(22px, 3.2vw, 32px); }
+    .eyebrow { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: .3px; }
+    .title { font-size: clamp(22px, 2.2vw, 26px); margin: 8px 0 6px; }
+    .desc { color: var(--muted); line-height: 1.7; font-size: clamp(14px, 1.6vw, 16px); }
+
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: 16px; padding: 12px 16px; border-radius: 12px;
+      background: #111827; border: 1px solid rgba(255,255,255,.08);
+      text-decoration: none; color: var(--fg); font-weight: 600; font-size: 15px;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+    .cta:hover { background: #0f172a; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+    .cta:focus { outline: 2px solid var(--ring); outline-offset: 3px; }
+
+    .badge {
+      position: absolute; top: 14px; right: 14px;
+      font-size: 12px; color: #0b1220; background: #c7d2fe; /* indigo-200 */
+      border-radius: 999px; padding: 6px 10px; font-weight: 700; letter-spacing: .2px;
+    }
+
+    footer { margin-top: 28px; color: var(--muted); font-size: 12px; text-align: center; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 1px, 1px); border: 0; }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="assets/img/IMG_9474.JPG" alt="Avatar" class="avatar">
-    <h1>
-        <span class="en-name">Ryotaro Suda</span><br>
-        <span class="jp-name">須田 涼太郎</span>
-    </h1>
-    <p><a href="https://meso.phys.s.u-tokyo.ac.jp/" target="_blank" rel="noopener">小林研究室</a>D1 / University of Tokyo · <a href="mailto:ryotaro.suda@phys.s.u-tokyo.ac.jp">Contact</a></p>
-    <nav>
-      <a href="/">Home</a>
-      <a href="about.html">About</a>
-      <a href="#projects">Projects</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <div>
+        <div class="brand">Ryotaro Suda</div>
+        <div class="subtitle">研究 / 研究以外の入口</div>
+      </div>
+    </header>
 
-  <main>
-    <section id="intro">
-      <h2>概要</h2>
-      <p>NV中心を用いた高圧環境での磁場測定研究をしています。</p>
-    </section>
+    <main class="grid" aria-labelledby="section-heading">
+      <h1 id="section-heading" class="sr-only">セクション分岐</h1>
 
-    <section id="projects">
-      <h2>最近のプロジェクト</h2>
-      <ul>
-        <li>ホームページを準備中</li>
-      </ul>
-    </section>
+      <!-- 研究 -->
+      <section class="card" aria-label="研究">
+        <span class="badge" aria-hidden="true">Research</span>
+        <div class="content">
+          <div class="eyebrow">研究</div>
+          <h2 class="title">研究関連ページへ</h2>
+          <p class="desc">論文、研究プロジェクト、発表、データセット、ツールなどを掲載。</p>
+          <a class="cta" href="research/" aria-label="研究関連ページへ移動">研究セクションを見る →</a>
+        </div>
+      </section>
 
-    <section id="links">
-      <h2>リンク</h2>
-      <p>
-        <a href="https://github.com/sudaUtokyo">GitHub</a> ·
-      </p>
-    </section>
-  </main>
+      <!-- その他 -->
+      <section class="card" aria-label="研究以外">
+        <span class="badge" aria-hidden="true">Other</span>
+        <div class="content">
+          <div class="eyebrow">研究以外</div>
+          <h2 class="title">プロフィール・活動など</h2>
+          <p class="desc">プロフィール、日記・ブログ、雑記、連絡先、リンク集など。</p>
+          <a class="cta" href="other/" aria-label="研究以外のページへ移動">その他のセクションを見る →</a>
+        </div>
+      </section>
 
-  <footer>&copy; 2025 Ryotaro Suda. All rights reserved.</footer>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Ryotaro Suda
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
