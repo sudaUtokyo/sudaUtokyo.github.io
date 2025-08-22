@@ -1,10 +1,116 @@
 <!doctype html>
-<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>研究以外</title>
-<body style="font-family:system-ui;margin:40px;line-height:1.7">
-  <h1>研究以外</h1>
-  <p>プロフィール / ブログ / 雑記 / 連絡先などをここに。</p>
-  <ul>
-    <li><a href="../">← トップに戻る</a></li>
-  </ul>
-</body></html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>研究以外 | Activities</title>
+  <meta name="description" content="研究以外の活動や経歴" />
+  <style>
+    :root{ --ink:#1f2937; --muted:#6b7280; --link:#1d4ed8; --bg:#fff; --border:#e5e7eb; --chip:#f3f4f6; --accent:#111827; }
+    html,body{height:100%}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); background:var(--bg)}
+    .wrap{max-width: 960px; margin: 48px auto; padding: 0 20px}
+    a{color:var(--link); text-decoration: none}
+    a:hover{text-decoration: underline}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:24px}
+    nav a{margin-right:12px}
+    h1{font-size: clamp(24px,3vw,32px); margin:.2em 0 .4em}
+    h2{font-size: clamp(20px,2.6vw,26px); margin: 1.2em 0 .6em}
+    h3{font-size: clamp(16px,2vw,20px); margin: 1em 0 .5em; color:var(--muted)}
+    .note{color:var(--muted); font-size: 14px}
+    .card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,.04);}
+    .grid{display:grid; gap:16px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; font-weight:700; border-radius:12px; border:1px solid var(--border); background:#f9fafb}
+    .btn--primary{background:#1f2937; color:#fff; border-color:#1f2937}
+    ul.flat{margin:.4em 0 1em 1.2em; padding:0}
+    ul.flat li{margin:.25em 0}
+    .sub{color:var(--muted); font-size:14px}
+    details.tgl{margin-top:8px; border:1px solid var(--border); border-radius:12px; background:#fafafa}
+    details.tgl[open]{background:#fff}
+    details.tgl > summary{cursor:pointer; list-style:none; padding:10px 14px; font-weight:700}
+    details.tgl > summary::-webkit-details-marker{display:none}
+    .pad{padding:8px 14px 14px}
+    .back{display:inline-block; margin-top: 24px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="note"><a href="../">← トップ</a></div>
+        <h1>研究以外の活動</h1>
+      </div>
+      <nav>
+        <a href="../research/">研究</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+
+      <!-- 経歴カード -->
+      <div class="card">
+        <h2>経歴</h2>
+        <h3>学歴</h3>
+        <ul class="flat">
+          <li>2019.3 国立筑波大学附属駒場中学校・高等学校 卒業</li>
+          <li>2023.3 東京大学理学部物理学科 卒業</li>
+          <li>2025.3 東京大学大学院理学系研究科物理学専攻 修士課程 修了</li>
+        </ul>
+        <div class="sub" style="margin-left:1.2em;">
+          学位論文「ダイヤモンド量子センサを用いた高圧下物性測定手法の開発」<br>
+          <span class="sub">(Development of physical properties measurement technique under high pressure using diamond quantum sensor)</span>
+        </div>
+
+        <h3 style="margin-top:1.2em;">主たる採用歴</h3>
+        <ul class="flat">
+          <li>2023.10 文部科学省卓越大学院プログラム (MEXT-WISE) 「変革を駆動する物理・数学プログラム (FoPM)」</li>
+          <li>2025.04 日本学術振興会 特別研究員DC1 研究課題「量子センサを用いた超高圧下高温超伝導の研究」</li>
+        </ul>
+
+        <h3>指導歴</h3>
+        <ul class="flat">
+          <li>2023.10 – 2025.03 東京大学理学部 物理学科 学部3年授業「物理学実験2（低温）」授業TA<br>
+          <span class="sub">内容：超伝導体や半導体の低温測定、ACジョセフソン効果の観測 等</span></li>
+        </ul>
+
+        <h3>主たる学外活動</h3>
+        <ul class="flat">
+          <li>2018  <a class="btn" href="https://www.imojp.org/archive/mo2018/jmo2018/honsen_result.html" target="_blank" rel="noopener">第28回日本数学オリンピック（JMO）本選 優秀賞</a></li>
+          <li>2019.4 – 2022.6 <a href="https://robotech.tuk.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">東京大学丁友会 RoboTech</a></li>
+          <li>2021.10 <a href="https://robotech.tuk.t.u-tokyo.ac.jp/history/#RC21" target="_blank" rel="noopener">NHK学生ロボコン2021 準優勝</a></li>
+          <li>2021.12 ABUロボコン2021</li>
+          <li>2024.8 – 2025.8 第70回 <a class="btn" href="https://cmpss.jp/" target="_blank" rel="noopener">物性若手夏の学校</a> 準備局</li>
+          <li>2025.8 – 第10期 <a class="btn" href="https://j-akademeia.jp/activities/junior/" target="_blank" rel="noopener">ジュニア・アカデメイア</a></li>
+        </ul>
+      </div>
+      <!-- 統一カード：RoboTech紹介 + 募金のお願い を1枚に集約 -->
+      <div class="card">
+        <h2>RoboTech OB（19er）</h2>
+        <p>
+          私は <a href="https://robotech.tuk.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">RoboTech</a> のOB（19er）です。RoboTechはロボット制作を通じて設計・加工・制御・チーム開発を学べる、とても良いサークルです。
+        </p>
+        <details class="tgl">
+          <div class="pad sub">我々19erは<a href="https://robotech.tuk.t.u-tokyo.ac.jp/history/#RC21" target="_blank" rel="noopener">2021年度のNHKロボコン大会で準優勝</a>しました。学生主体のロボコン運営、分野横断の学び、今の自分にも直結する経験が得られました。</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://robotech.tuk.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">RoboTech 公式サイト</a>
+          <a class="btn btn--primary" href="https://utf.u-tokyo.ac.jp/project/pjt103" target="_blank" rel="noopener">世界でも通用する実力を持つRoboTechを是非支援してやってください。</a>
+        </div>
+      </div>
+
+
+      <!-- 夏学紹介カード -->
+      <div class="card">
+        <h2>物性若手夏の学校（夏学）</h2>
+        <p>
+          「<a class="btn" href="https://cmpss.jp/" target="_blank" rel="noopener">物性若手夏の学校</a>」は、全国の若手学生が集い、物性物理の最新トピックを学ぶ勉強会です。私は第70回の準備局として運営に携わりました。
+        </p>
+        <p class="sub">分科会・ポスターなど、分野横断の交流の場として機能しています。参加を強くおすすめします。</p>
+      </div>
+    </section>
+
+    <a class="back" href="../">← トップへ戻る</a>
+  </div>
+</body>
+</html>
