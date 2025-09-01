@@ -1,1 +1,2 @@
 # sudaUtokyo.github.io
+- コミットメッセージとか適当でmainブランチだけで更新してて見るに耐えない代物なのでhistoryはあまり参照しないでね
